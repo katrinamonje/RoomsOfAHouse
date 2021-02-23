@@ -1,9 +1,13 @@
-## Simple State Machine
-#### by Scott Kildall
+## Rooms of a House
+#### by Katrina Monje
+February 23, 2021
 
 
 ### Overview
-This is a template for a simple state machine that goes between five states and starts with a splash screen
+This is a modified version of the "Simple State Machine Template" provided by Scott Kildall, for the Rooms of the House Assignment. It explores state machines, keyboard functions, preload(), and array-indexing through a "Dream House" navigation.
+
+### My AdobeXD Project Link
+https://xd.adobe.com/view/5faed1c4-8abe-4753-9d03-7e64bcdea159-0afd/?fullscreen
 
 
 ### Modifying the Template
