@@ -154,35 +154,63 @@ function draw() {
 // draws images from bedroomAssets array
 drawBedroom = function() {
 
+//images in array
+image(bedroomAssets[0], x, y);  //
+image(bedroomAssets[1], x, y);  //
+image(bedroomAssets[2], x, y);  //
+image(bedroomAssets[3], x, y);  //
+image(bedroomAssets[4], x, y);  //
+image(bedroomAssets[5], x, y);  //
+image(bedroomAssets[6], x, y);  //
+image(bedroomAssets[7], x, y);  //
+image(bedroomAssets[8], x, y);  //
+image(bedroomAssets[8], x, y);  //
+image(bedroomAssets[9], x, y);  //
+image(bedroomAssets[10], x, y);  //
+image(bedroomAssets[11], x, y);  //
+
+
 }
 
 // draws images from bathroommAssets array
 drawBathroom = function() {
+
+//images in array
 
 }
 
 // draws images from theaterRoomAssets array
 drawTheaterRoom = function() {
 
+//images in array
+
 }
 
 // draws images from livingRoomAssets array
 drawLivingRoom = function() {
+
+//images in array
 
 }
 
 // draws images from kitchenAssets array
 drawKitchen = function() {
 
+//images in array
+
 }
 
 // draws images from gardenAssets array
 drawGarden = function() {
 
+//images in array
+
 }
 
 // draws images from instructionAssets array
 drawInstructions = function() {
+
+//images in array
 
 }
 
