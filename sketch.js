@@ -51,36 +51,58 @@ function preload() {
   instructionAssets[0] = loadImage(‘assets/clipboard.png’);
 
   // bedroom images
-  bedroomAssets[0] = loadImage(‘assets/insertImageTitle.png’);
-  bedroomAssets[1] = loadImage(‘assets/insertImageTitle.png’);
-  bedroomAssets[2] = loadImage(‘assets/insertImageTitle.png’);
-  bedroomAssets[3] = loadImage(‘assets/insertImageTitle.png’);
-  bedroomAssets[4] = loadImage(‘assets/insertImageTitle.png’);
-  bedroomAssets[5] = loadImage(‘assets/insertImageTitle.png’);
+  bedroomAssets[0] = loadImage(‘assets/beigeWall.png’);
+  bedroomAssets[1] = loadImage(‘assets/bedroomFloor.png’);
+  bedroomAssets[2] = loadImage(‘assets/bedroomGarden.jpeg’);
+  bedroomAssets[3] = loadImage(‘assets/bedroomCeiling.png’);
+  bedroomAssets[4] = loadImage(‘assets/slidingDoors.png’);
+  bedroomAssets[5] = loadImage(‘assets/rightCurtains.png’);
+  bedroomAssets[6] = loadImage(‘assets/leftCurtains.png’);
+  bedroomAssets[7] = loadImage(‘assets/rightCurtains.png’);
+  bedroomAssets[8] = loadImage(‘assets/bed.png’);
+  bedroomAssets[9] = loadImage(‘assets/floorLamp.png’);
+  bedroomAssets[10] = loadImage(‘assets/terracottaChairs.png’);
+  bedroomAssets[11] = loadImage(‘assets/bedroomPlant.png’);
+
 
   // bathroom images
-  bathroomAssets[0] = loadImage(‘assets/insertImageTitle.png’);
-  bathroomAssets[1] = loadImage(‘assets/insertImageTitle.png’);
-  bathroomAssets[2] = loadImage(‘assets/insertImageTitle.png’);
-  bathroomAssets[3] = loadImage(‘assets/insertImageTitle.png’);
-  bathroomAssets[4] = loadImage(‘assets/insertImageTitle.png’);
-  bathroomAssets[5] = loadImage(‘assets/insertImageTitle.png’);
+  bathroomAssets[0] = loadImage(‘assets/blackWall.png’);
+  bathroomAssets[1] = loadImage(‘assets/concreteWall.jpeg’);
+  bathroomAssets[2] = loadImage(‘assets/mirror.png’);
+  bathroomAssets[3] = loadImage(‘assets/showerHead.png’);
+  bathroomAssets[4] = loadImage(‘assets/marbleWallpaper.jpeg’);
+  bathroomAssets[5] = loadImage(‘assets/bathroomFloor.png’);
+  bathroomAssets[6] = loadImage(‘assets/showerFaucet.png’);
+  bathroomAssets[7] = loadImage(‘assets/bathroomPlant.png’);
+  bathroomAssets[9] = loadImage(‘assets/sinkBottom.png’);
+  bathroomAssets[10] = loadImage(‘assets/sinkTop.png’);
+  bathroomAssets[11] = loadImage(‘assets/showerEnclosure.png’);
+  bathroomAssets[12] = loadImage(‘assets/bathroomLight.png’);
+  bathroomAssets[13] = loadImage(‘assets/toilet.png’);
 
   // theater room images
-  theaterRoomAssets [0] = loadImage(‘assets/insertImageTitle.png’);
-  theaterRoomAssets [1] = loadImage(‘assets/insertImageTitle.png’);
-  theaterRoomAssets [2] = loadImage(‘assets/insertImageTitle.png’);
-  theaterRoomAssets [3] = loadImage(‘assets/insertImageTitle.png’);
-  theaterRoomAssets [4] = loadImage(‘assets/insertImageTitle.png’);
-  theaterRoomAssets [5] = loadImage(‘assets/insertImageTitle.png’);
+  theaterRoomAssets [0] = loadImage(‘assets/theaterRoomFloor.png’);
+  theaterRoomAssets [1] = loadImage(‘assets/woodenWallpaper.png’);
+  theaterRoomAssets [2] = loadImage(‘assets/cocktailBar.png’);
+  theaterRoomAssets [3] = loadImage(‘assets/recliningChairTopRight.png’);
+  theaterRoomAssets [4] = loadImage(‘assets/recliningChairBottomLeft.png’);
+  theaterRoomAssets [5] = loadImage(‘assets/moviePoster.png’);
+  theaterRoomAssets [6] = loadImage(‘assets/recliningChairBoottomRight.png’);
+  theaterRoomAssets [7] = loadImage(‘assets/recliningChairBottomMiddle.png’);
+  theaterRoomAssets [8] = loadImage(‘assets/recliningChairBottomLeft.png’);
+  theaterRoomAssets [9] = loadImage(‘assets/projectorScreen.png’);
+  theaterRoomAssets [10] = loadImage(‘assets/leftSpotlight.png’);
+  theaterRoomAssets [11] = loadImage(‘assets/rightSpotlight.png’);
 
   // living room images
-  livingRoomAssets [0] = loadImage(‘assets/insertImageTitle.png’);
-  livingRoomAssets [1] = loadImage(‘assets/insertImageTitle.png’);
-  livingRoomAssets [2] = loadImage(‘assets/insertImageTitle.png’);
-  livingRoomAssets [3] = loadImage(‘assets/insertImageTitle.png’);
-  livingRoomAssets [4] = loadImage(‘assets/insertImageTitle.png’);
-  livingRoomAssets [5] = loadImage(‘assets/insertImageTitle.png’);
+  livingRoomAssets [0] = loadImage(‘assets/livingRoom.png’);
+  livingRoomAssets [1] = loadImage(‘assets/hangingDecor.png’);
+  livingRoomAssets [2] = loadImage(‘assets/pottedPlant.png’);
+  livingRoomAssets [3] = loadImage(‘assets/beanbagChair.png’);
+  livingRoomAssets [4] = loadImage(‘assets/couch.png’);
+  livingRoomAssets [5] = loadImage(‘assets/centerTable.png’);
+  livingRoomAssets [6] = loadImage(‘assets/sideSofa.png’);
+  livingRoomAssets [7] = loadImage(‘assets/hangingBookshelves.png’);
 
   // kitchen images
   kitchenAssets[0] = loadImage(‘assets/insertImageTitle.png’);
