@@ -49,6 +49,7 @@ var navKey = [];
 function preload() {
   // clipboard
   instructionAssets[0] = loadImage(‘assets/clipboard.png’);
+  instructionAssets[1] = loadImage(‘assets/button.png’);
 
   // bedroom images
   bedroomAssets[0] = loadImage(‘assets/beigeWall.png’);
@@ -105,20 +106,20 @@ function preload() {
   livingRoomAssets [7] = loadImage(‘assets/hangingBookshelves.png’);
 
   // kitchen images
-  kitchenAssets[0] = loadImage(‘assets/insertImageTitle.png’);
-  kitchenAssets[1] = loadImage(‘assets/insertImageTitle.png’);
-  kitchenAssets[2] = loadImage(‘assets/insertImageTitle.png’);
-  kitchenAssets[3] = loadImage(‘assets/insertImageTitle.png’);
-  kitchenAssets[4] = loadImage(‘assets/insertImageTitle.png’);
-  kitchenAssets[5] = loadImage(‘assets/insertImageTitle.png’);
-
+  kitchenAssets[0] = loadImage(‘assets/grayWall.png’);
+  kitchenAssets[1] = loadImage(‘assets/backsplashLeft.jpeg’);
+  kitchenAssets[2] = loadImage(‘assets/backsplashRight.jpeg’);
+  kitchenAssets[3] = loadImage(‘assets/kitchenFloor.png’);
+  kitchenAssets[4] = loadImage(‘assets/smartFridge.png’);
+  kitchenAssets[5] = loadImage(‘assets/kitchenCountertops.png’);
+  kitchenAssets[6] = loadImage(‘assets/kitchenIsland.png’);
+  kitchenAssets[7] = loadImage(‘assets/gardenDoor.png’);
+  kitchenAssets[8] = loadImage(‘assets/kitchenCeiling.png’);
+  kitchenAssets[9] = loadImage(‘assets/pendantLamp.png’);
+  kitchenAssets[10] = loadImage(‘assets/kitchenPlant.png’);
   // garden images
-  gardenAssets[0] = loadImage(‘assets/insertImageTitle.png’);
-  gardenAssets[1] = loadImage(‘assets/insertImageTitle.png’);
-  gardenAssets[2] = loadImage(‘assets/insertImageTitle.png’);
-  gardenAssets[3] = loadImage(‘assets/insertImageTitle.png’);
-  gardenAssets[4] = loadImage(‘assets/insertImageTitle.png’);
-  gardenAssets[5] = loadImage(‘assets/insertImageTitle.png’);
+  gardenAssets[0] = loadImage(‘assets/garden.png’);
+  gardenAssets[1] = loadImage(‘assets/hammock.png’);
 }
 
 // center drawing, drawFunction will be one for default
