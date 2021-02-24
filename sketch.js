@@ -1,6 +1,10 @@
 /***********************************************************************************
-	SimpleStateMachine - TEMPLATE
-	by Scott Kildall
+	Rooms of a House Assignment (modified Simple State Machine with Splash template)
+	by Katrina Monje
+
+  Overview:
+  This is an assignment that shows a navigation structure of 6 rooms of a house 
+  using the mouse and some keyboard functions.
 
 	Template:
 
@@ -11,113 +15,152 @@
 	Also start your localhost before running this, otherwise no PNGs will display
 
 ------------------------------------------------------------------------------------
-	The way it works — you don't need to know this for the template use
-	* array of images gets loaded at startup
-	* drawFunction is a VARIABLE that points to a function varible name
-	* drawOne(), drawTwo(), etc. are set to be functions.
-	* the the keys 1-5 will change the drawFunction variable
-  * starts with drawSplash and waits for a mousePressed event
-  * adds a key, 's' to return to the splash screen
-
+	The way it works
+	* arrays of images get loaded at startup
+  * drawFunction is a VARIABLE that points to a function variable name
+  * drawRoom is set to be the function
+  * the keys ‘r, b, t, l, k, g’ will change the drawFunction variable
 ------------------------------------------------------------------------------------
 	Notes:
 	- a more advanced state machine with use array-indexing variables for each of
 		images the draw functions, but this is just for illustrative purposes
-
 	- even more advanced will be to put the draw functions into an array, would
 		be helpful for randomizing, go to the next function, etc
-
 	- next step after that would be to put interfaces into an array that maps to
 		the functions
-
-
 ***********************************************************************************/
-
-// Array of images
-var images = [];
 
 // variable that is a function 
 var drawFunction;
 
-// offset from bottom of screen
-var gTextOffset = 20;
+// image variables
+var bedroomAssets = [];
+var bathroomAssets = [];
+var theaterRoomAssets = [];
+var livingRoomAssets = [];
+var kitchenAssets = [];
+var gardenAssets = [];
+var instructionAssets = [];
 
-// load all images into an array
+// variable setting up array for navigation keys
+var navKey = [];
+
+// preload all images into an arrays according to room
 function preload() {
-  images[0] = loadImage('assets/one.png');
-  images[1] = loadImage('assets/two.png');
-  images[2] = loadImage('assets/three.png');
-  images[3] = loadImage('assets/four.png');
-  images[4] = loadImage('assets/five.png');
-  images[5] = loadImage('assets/splash.png');
+  // clipboard
+  instructionAssets[0] = loadImage(‘assets/clipboard.png’);
+
+  // bedroom images
+  bedroomAssets[0] = loadImage(‘assets/insertImageTitle.png’);
+  bedroomAssets[1] = loadImage(‘assets/insertImageTitle.png’);
+  bedroomAssets[2] = loadImage(‘assets/insertImageTitle.png’);
+  bedroomAssets[3] = loadImage(‘assets/insertImageTitle.png’);
+  bedroomAssets[4] = loadImage(‘assets/insertImageTitle.png’);
+  bedroomAssets[5] = loadImage(‘assets/insertImageTitle.png’);
+
+  // bathroom images
+  bathroomAssets[0] = loadImage(‘assets/insertImageTitle.png’);
+  bathroomAssets[1] = loadImage(‘assets/insertImageTitle.png’);
+  bathroomAssets[2] = loadImage(‘assets/insertImageTitle.png’);
+  bathroomAssets[3] = loadImage(‘assets/insertImageTitle.png’);
+  bathroomAssets[4] = loadImage(‘assets/insertImageTitle.png’);
+  bathroomAssets[5] = loadImage(‘assets/insertImageTitle.png’);
+
+  // theater room images
+  theaterRoomAssets [0] = loadImage(‘assets/insertImageTitle.png’);
+  theaterRoomAssets [1] = loadImage(‘assets/insertImageTitle.png’);
+  theaterRoomAssets [2] = loadImage(‘assets/insertImageTitle.png’);
+  theaterRoomAssets [3] = loadImage(‘assets/insertImageTitle.png’);
+  theaterRoomAssets [4] = loadImage(‘assets/insertImageTitle.png’);
+  theaterRoomAssets [5] = loadImage(‘assets/insertImageTitle.png’);
+
+  // living room images
+  livingRoomAssets [0] = loadImage(‘assets/insertImageTitle.png’);
+  livingRoomAssets [1] = loadImage(‘assets/insertImageTitle.png’);
+  livingRoomAssets [2] = loadImage(‘assets/insertImageTitle.png’);
+  livingRoomAssets [3] = loadImage(‘assets/insertImageTitle.png’);
+  livingRoomAssets [4] = loadImage(‘assets/insertImageTitle.png’);
+  livingRoomAssets [5] = loadImage(‘assets/insertImageTitle.png’);
+
+  // kitchen images
+  kitchenAssets[0] = loadImage(‘assets/insertImageTitle.png’);
+  kitchenAssets[1] = loadImage(‘assets/insertImageTitle.png’);
+  kitchenAssets[2] = loadImage(‘assets/insertImageTitle.png’);
+  kitchenAssets[3] = loadImage(‘assets/insertImageTitle.png’);
+  kitchenAssets[4] = loadImage(‘assets/insertImageTitle.png’);
+  kitchenAssets[5] = loadImage(‘assets/insertImageTitle.png’);
+
+  // garden images
+  gardenAssets[0] = loadImage(‘assets/insertImageTitle.png’);
+  gardenAssets[1] = loadImage(‘assets/insertImageTitle.png’);
+  gardenAssets[2] = loadImage(‘assets/insertImageTitle.png’);
+  gardenAssets[3] = loadImage(‘assets/insertImageTitle.png’);
+  gardenAssets[4] = loadImage(‘assets/insertImageTitle.png’);
+  gardenAssets[5] = loadImage(‘assets/insertImageTitle.png’);
 }
 
-// Center drawing, drawFunction will be one for default
+// center drawing, drawFunction will be one for default
 function setup() {
-  createCanvas(windowWidth, windowHeight);
-
-  // Center our drawing objects
-  imageMode(CENTER);
+  createCanvas(1920, 1080);
   textAlign(CENTER);
   textSize(24);
+  noStroke();
+
+  // setting the array of navigation keys
+  navKey[0] = (‘[r]’);
+  navKey[1] = (‘[b]’);
+  navKey[2] = (‘[t]’);
+  navKey[3] = (‘[l]’);
+  navKey[4] = (‘[k]’);
+  navKey[5] = (‘[g]’);
 
   // set to one for startup
-  drawFunction = drawSplash;
+  drawFunction = drawBedroom;
 }
 
 // Very simple, sets the background color and calls your state machine function
 function draw() {
   background(192);
 
-  // will call your state machine function
+  // will call the state machine function
   drawFunction();
 }
 
 //========= TEMPLATE: modify these functions, INSIDE the function blocks only =========
 
-//-- drawOne() will draw the image at index 0 from the array
-drawOne = function() {
-   image(images[0],width/2, height/2);
+// draws images from bedroomAssets array
+drawBedroom = function() {
 
-   fill(0,0,0);
-   text("State One", width/2, height - gTextOffset);
 }
 
-//-- drawTwo() will draw the image at index 1 from the array
-drawTwo = function() {
-   image(images[1],width/2, height/2);
+// draws images from bathroommAssets array
+drawBathroom = function() {
 
-   fill(240,120,0);
-   text("State Two", width/2, height - gTextOffset);
 }
 
-//-- drawOne() will draw the image at index 2 from the array
-drawThree = function() {
-   image(images[2],width/2, height/2);
+// draws images from theaterRoomAssets array
+drawTheaterRoom = function() {
 
-   fill(40,230,120);
-   text("State Three", width/2, height - gTextOffset);
 }
 
-//-- drawOne() will draw the image at index 3 from the array
-drawFour = function() {
-   image(images[3],width/2, height/2);
+// draws images from livingRoomAssets array
+drawLivingRoom = function() {
 
-   fill(255,255,178);
-   text("State Four", width/2, height - gTextOffset);
 }
 
-//-- drawOne() will draw the image at index 4 from the array
-drawFive = function() {
-   image(images[4],width/2, height/2);
+// draws images from kitchenAssets array
+drawKitchen = function() {
 
-   fill(230,50,50);
-   text("State Five", width/2, height - gTextOffset);
 }
 
-//-- drawSplash() will draw the image at index 4 from the array
-drawSplash = function() {
-   image(images[5],width/2, height/2);
+// draws images from gardenAssets array
+drawGarden = function() {
+
+}
+
+// draws images from instructionAssets array
+drawInstructions = function() {
+
 }
 
 
