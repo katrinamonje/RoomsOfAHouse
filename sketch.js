@@ -155,17 +155,17 @@ function draw() {
 drawBedroom = function() {
 
 //images in array
-image(bedroomAssets[0], x, y);  //
-image(bedroomAssets[1], x, y);  //
-image(bedroomAssets[2], x, y);  //
-image(bedroomAssets[3], x, y);  //
-image(bedroomAssets[4], x, y);  //
-image(bedroomAssets[5], x, y);  //
-image(bedroomAssets[6], x, y);  //
-image(bedroomAssets[7], x, y);  //
-image(bedroomAssets[8], x, y);  //
-image(bedroomAssets[8], x, y);  //
-image(bedroomAssets[9], x, y);  //
+image(bedroomAssets[0], x, y);   //
+image(bedroomAssets[1], x, y);   //
+image(bedroomAssets[2], x, y);   //
+image(bedroomAssets[3], x, y);   //
+image(bedroomAssets[4], x, y);   //
+image(bedroomAssets[5], x, y);   //
+image(bedroomAssets[6], x, y);   //
+image(bedroomAssets[7], x, y);   //
+image(bedroomAssets[8], x, y);   //
+image(bedroomAssets[8], x, y);   //
+image(bedroomAssets[9], x, y);   //
 image(bedroomAssets[10], x, y);  //
 image(bedroomAssets[11], x, y);  //
 
@@ -176,6 +176,20 @@ image(bedroomAssets[11], x, y);  //
 drawBathroom = function() {
 
 //images in array
+image(bathroomAssets[0], x, y);  //
+image(bathroomAssets[1], x, y);  //
+image(bathroomAssets[2], x, y);  //
+image(bathroomAssets[3], x, y);  //
+image(bathroomAssets[4], x, y);  //
+image(bathroomAssets[5], x, y);  //
+image(bathroomAssets[6], x, y);  //
+image(bathroomAssets[7], x, y);  //
+image(bathroomAssets[8], x, y);  //
+image(bathroomAssets[9], x, y);  //
+image(bathroomAssets[10], x, y); //
+image(bathroomAssets[11], x, y); //
+image(bathroomAssets[12], x, y); //
+image(bathroomAssets[13], x, y); //
 
 }
 
@@ -183,6 +197,17 @@ drawBathroom = function() {
 drawTheaterRoom = function() {
 
 //images in array
+image(theaterRoomAssets[0], x, y);  //
+image(theaterRoomAssets[1], x, y);  //
+image(theaterRoomAssets[3], x, y);  //
+image(theaterRoomAssets[4], x, y);  //
+image(theaterRoomAssets[5], x, y);  //
+image(theaterRoomAssets[6], x, y);  //
+image(theaterRoomAssets[7], x, y);  //
+image(theaterRoomAssets[8], x, y);  //
+image(theaterRoomAssets[8], x, y);  //
+image(theaterRoomAssets[10], x, y); //
+image(theaterRoomAssets[11], x, y); //
 
 }
 
@@ -190,6 +215,14 @@ drawTheaterRoom = function() {
 drawLivingRoom = function() {
 
 //images in array
+image(livingRoomAssets[0], x, y);   //
+image(livingRoomAssets[1], x, y);   //
+image(livingRoomAssets[2], x, y);   //
+image(livingRoomAssets[3], x, y);   //
+image(livingRoomAssets[4], x, y);   //
+image(livingRoomAssets[5], x, y);   //
+image(livingRoomAssets[6], x, y);   //
+image(livingRoomAssets[7], x, y);   //
 
 }
 
@@ -197,6 +230,17 @@ drawLivingRoom = function() {
 drawKitchen = function() {
 
 //images in array
+image(kitchenRoomAssets[0], x, y);   //
+image(kitchenRoomAssets[1], x, y);   //
+image(kitchenRoomAssets[2], x, y);   //
+image(kitchenRoomAssets[3], x, y);   //
+image(kitchenRoomAssets[4], x, y);   //
+image(kitchenRoomAssets[5], x, y);   //
+image(kitchenRoomAssets[6], x, y);   //
+image(kitchenRoomAssets[7], x, y);   //
+image(kitchenRoomAssets[8], x, y);   //
+image(kitchenRoomAssets[9], x, y);   //
+image(kitchenRoomAssets[10], x, y);   //
 
 }
 
