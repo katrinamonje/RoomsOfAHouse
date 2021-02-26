@@ -74,11 +74,11 @@ function preload() {
   bathroomAssets[5] = loadImage(‘assets/bathroomFloor.png’);
   bathroomAssets[6] = loadImage(‘assets/showerFaucet.png’);
   bathroomAssets[7] = loadImage(‘assets/bathroomPlant.png’);
-  bathroomAssets[9] = loadImage(‘assets/sinkBottom.png’);
-  bathroomAssets[10] = loadImage(‘assets/sinkTop.png’);
-  bathroomAssets[11] = loadImage(‘assets/showerEnclosure.png’);
-  bathroomAssets[12] = loadImage(‘assets/bathroomLight.png’);
-  bathroomAssets[13] = loadImage(‘assets/toilet.png’);
+  bathroomAssets[8] = loadImage(‘assets/sinkBottom.png’);
+  bathroomAssets[9] = loadImage(‘assets/sinkTop.png’);
+  bathroomAssets[10] = loadImage(‘assets/showerEnclosure.png’);
+  bathroomAssets[11] = loadImage(‘assets/bathroomLight.png’);
+  bathroomAssets[12] = loadImage(‘assets/toilet.png’);
 
   // theater room images
   theaterRoomAssets [0] = loadImage(‘assets/theaterRoomFloor.png’);
@@ -125,6 +125,7 @@ function preload() {
 // center drawing, drawFunction will be one for default
 function setup() {
   createCanvas(1920, 1080);
+  imageMode(CENTER);
   textAlign(CENTER);
   textSize(24);
   noStroke();
@@ -173,20 +174,19 @@ image(bedroomAssets[10], x, y);   // plant
 drawBathroom = function() {
 
 //images in array
-image(bathroomAssets[0], x, y);  //
-image(bathroomAssets[1], x, y);  //
-image(bathroomAssets[2], x, y);  //
-image(bathroomAssets[3], x, y);  //
-image(bathroomAssets[4], x, y);  //
-image(bathroomAssets[5], x, y);  //
-image(bathroomAssets[6], x, y);  //
-image(bathroomAssets[7], x, y);  //
-image(bathroomAssets[8], x, y);  //
-image(bathroomAssets[9], x, y);  //
-image(bathroomAssets[10], x, y); //
-image(bathroomAssets[11], x, y); //
-image(bathroomAssets[12], x, y); //
-image(bathroomAssets[13], x, y); //
+image(bathroomAssets[0], x, y);  // wall
+image(bathroomAssets[1], x, y);  // concrete wall
+image(bathroomAssets[2], x, y);  // mirror
+image(bathroomAssets[3], x, y);  // shower head
+image(bathroomAssets[4], x, y);  // marble wallpaper
+image(bathroomAssets[5], x, y);  // floor
+image(bathroomAssets[6], x, y);  // shower faucet
+image(bathroomAssets[7], x, y);  // plant
+image(bathroomAssets[8], x, y);  // sink bottom
+image(bathroomAssets[9], x, y);  // sink top
+image(bathroomAssets[10], x, y); // shower enclosure
+image(bathroomAssets[11], x, y); // light
+image(bathroomAssets[12], x, y); // toilet
 
 }
 
@@ -194,17 +194,17 @@ image(bathroomAssets[13], x, y); //
 drawTheaterRoom = function() {
 
 //images in array
-image(theaterRoomAssets[0], x, y);  //
-image(theaterRoomAssets[1], x, y);  //
-image(theaterRoomAssets[3], x, y);  //
-image(theaterRoomAssets[4], x, y);  //
-image(theaterRoomAssets[5], x, y);  //
-image(theaterRoomAssets[6], x, y);  //
-image(theaterRoomAssets[7], x, y);  //
-image(theaterRoomAssets[8], x, y);  //
-image(theaterRoomAssets[8], x, y);  //
-image(theaterRoomAssets[10], x, y); //
-image(theaterRoomAssets[11], x, y); //
+image(theaterRoomAssets[0], x, y);  // floor
+image(theaterRoomAssets[1], x, y);  // wallpaper
+image(theaterRoomAssets[3], x, y);  // cocktail bar
+image(theaterRoomAssets[4], x, y);  // reclining chair top right
+image(theaterRoomAssets[5], x, y);  // reclining chair top left
+image(theaterRoomAssets[6], x, y);  // reclining chair bottoom right
+image(theaterRoomAssets[7], x, y);  // reclining chair botttom middle
+image(theaterRoomAssets[8], x, y);  // reclining chair bottom left
+image(theaterRoomAssets[8], x, y);  // projector screen
+image(theaterRoomAssets[10], x, y); // left spotlight
+image(theaterRoomAssets[11], x, y); // right spotlight
 
 }
 
@@ -212,14 +212,14 @@ image(theaterRoomAssets[11], x, y); //
 drawLivingRoom = function() {
 
 //images in array
-image(livingRoomAssets[0], x, y);   //
-image(livingRoomAssets[1], x, y);   //
-image(livingRoomAssets[2], x, y);   //
-image(livingRoomAssets[3], x, y);   //
-image(livingRoomAssets[4], x, y);   //
-image(livingRoomAssets[5], x, y);   //
-image(livingRoomAssets[6], x, y);   //
-image(livingRoomAssets[7], x, y);   //
+image(livingRoomAssets[0], x, y);   // living room
+image(livingRoomAssets[1], x, y);   // hanging deecor
+image(livingRoomAssets[2], x, y);   // plant
+image(livingRoomAssets[3], x, y);   // beanbag chair
+image(livingRoomAssets[4], x, y);   // couch
+image(livingRoomAssets[5], x, y);   // center table
+image(livingRoomAssets[6], x, y);   // side sofa
+image(livingRoomAssets[7], x, y);   // bookshelves
 
 }
 
@@ -227,17 +227,17 @@ image(livingRoomAssets[7], x, y);   //
 drawKitchen = function() {
 
 //images in array
-image(kitchenRoomAssets[0], x, y);   //
-image(kitchenRoomAssets[1], x, y);   //
-image(kitchenRoomAssets[2], x, y);   //
-image(kitchenRoomAssets[3], x, y);   //
-image(kitchenRoomAssets[4], x, y);   //
-image(kitchenRoomAssets[5], x, y);   //
-image(kitchenRoomAssets[6], x, y);   //
-image(kitchenRoomAssets[7], x, y);   //
-image(kitchenRoomAssets[8], x, y);   //
-image(kitchenRoomAssets[9], x, y);   //
-image(kitchenRoomAssets[10], x, y);   //
+image(kitchenRoomAssets[0], x, y);   // wall
+image(kitchenRoomAssets[1], x, y);   // backsplash 1
+image(kitchenRoomAssets[2], x, y);   // backsplaash 2
+image(kitchenRoomAssets[3], x, y);   // floor
+image(kitchenRoomAssets[4], x, y);   // fridge
+image(kitchenRoomAssets[5], x, y);   // countertops
+image(kitchenRoomAssets[6], x, y);   // island
+image(kitchenRoomAssets[7], x, y);   // door
+image(kitchenRoomAssets[8], x, y);   // ceiling
+image(kitchenRoomAssets[9], x, y);   // lamp
+image(kitchenRoomAssets[10], x, y);   // plant
 
 }
 
@@ -245,8 +245,8 @@ image(kitchenRoomAssets[10], x, y);   //
 drawGarden = function() {
 
 //images in array
-image(gardenAssets[0], x, y);  //
-image(gardenAssets[0], x, y);  //
+image(gardenAssets[0], x, y);  // garden
+image(gardenAssets[0], x, y);  // hammock
 
 }
 
@@ -254,8 +254,8 @@ image(gardenAssets[0], x, y);  //
 drawInstructions = function() {
 
 //images in array
-image(instructionAssets[0], x, y);  //
-image(instructionAssets[1], x, y);  //
+image(instructionAssets[0], x, y);  // clipboard
+image(instructionAssets[1], x, y);  // button
 
 }
 
@@ -263,35 +263,36 @@ image(instructionAssets[1], x, y);  //
 //========= TEMPLATE: add or change interface functions, as you like =========
 
 // Change the drawFunction variable based on your interaction
-function keyTyped() {
-  if( drawFunction === drawSplash ) {
-    return;
-  }
+function keyPressed() {
 
-  if( key === '1' ) {
-  	drawFunction = drawOne;
-  }
-  else if( key === '2' ) {
-  	drawFunction = drawTwo;
-  }
-  else if( key === '3' ) {
-  	drawFunction = drawThree;
-  }
-  else if( key === '4' ) {
-  	drawFunction = drawFour;
-  }
-  else if( key === '5' ) {
-  	drawFunction = drawFive;
-  }
+  print(keyCode);
 
-  else if( key === 's' ) {
-    drawFunction = drawSplash;
-  }
+  //draw bedroom
+  if( drawFunction === drawBedroom ) {
+    if( key === 'r' ) {
+  	   drawFunction = drawBedroom;
+    }
+    else if( key === 'b' ) {
+  	 drawFunction = drawBathroom;
+    }
+    else if( key === 't' ) {
+  	 drawFunction = drawTheaterRoom;
+    }
+    else if( key === 'l' ) {
+  	 drawFunction = drawLivingRoom;
+    }
+    else if( key === 'k' ) {
+  	 drawFunction = drawKitchen;
+    }
+
+    else if( key === 'g' ) {
+      drawFunction = drawGarden;
+    }
 }
 
+// help icon --> instructions screen
 function mousePressed() {
-  // only change state if we are in splash screen
   if( drawFunction === drawSplash ) {
-    drawFunction = drawOne;
+    drawFunction = drawInstructions;
   }
 }
