@@ -59,11 +59,10 @@ function preload() {
   bedroomAssets[4] = loadImage(‘assets/slidingDoors.png’);
   bedroomAssets[5] = loadImage(‘assets/rightCurtains.png’);
   bedroomAssets[6] = loadImage(‘assets/leftCurtains.png’);
-  bedroomAssets[7] = loadImage(‘assets/rightCurtains.png’);
-  bedroomAssets[8] = loadImage(‘assets/bed.png’);
-  bedroomAssets[9] = loadImage(‘assets/floorLamp.png’);
-  bedroomAssets[10] = loadImage(‘assets/terracottaChairs.png’);
-  bedroomAssets[11] = loadImage(‘assets/bedroomPlant.png’);
+  bedroomAssets[7] = loadImage(‘assets/bed.png’);
+  bedroomAssets[8] = loadImage(‘assets/floorLamp.png’);
+  bedroomAssets[9] = loadImage(‘assets/terracottaChairs.png’);
+  bedroomAssets[10] = loadImage(‘assets/bedroomPlant.png’);
 
 
   // bathroom images
@@ -117,6 +116,7 @@ function preload() {
   kitchenAssets[8] = loadImage(‘assets/kitchenCeiling.png’);
   kitchenAssets[9] = loadImage(‘assets/pendantLamp.png’);
   kitchenAssets[10] = loadImage(‘assets/kitchenPlant.png’);
+  
   // garden images
   gardenAssets[0] = loadImage(‘assets/garden.png’);
   gardenAssets[1] = loadImage(‘assets/hammock.png’);
@@ -155,20 +155,17 @@ function draw() {
 drawBedroom = function() {
 
 //images in array
-image(bedroomAssets[0], x, y);   //
-image(bedroomAssets[1], x, y);   //
-image(bedroomAssets[2], x, y);   //
-image(bedroomAssets[3], x, y);   //
-image(bedroomAssets[4], x, y);   //
-image(bedroomAssets[5], x, y);   //
-image(bedroomAssets[6], x, y);   //
-image(bedroomAssets[7], x, y);   //
-image(bedroomAssets[8], x, y);   //
-image(bedroomAssets[8], x, y);   //
-image(bedroomAssets[9], x, y);   //
-image(bedroomAssets[10], x, y);  //
-image(bedroomAssets[11], x, y);  //
-
+image(bedroomAssets[0], x, y);   // wall
+image(bedroomAssets[1], x, y);   // floor
+image(bedroomAssets[2], x, y);   // garden
+image(bedroomAssets[3], x, y);   // ceiling
+image(bedroomAssets[4], x, y);   // sliding doors
+image(bedroomAssets[5], x, y);   // right curtains
+image(bedroomAssets[6], x, y);   // left curtains
+image(bedroomAssets[7], x, y);   // bed
+image(bedroomAssets[8], x, y);   // floor lamp
+image(bedroomAssets[9], x, y);   // chairs
+image(bedroomAssets[10], x, y);   // plant
 
 }
 
@@ -248,6 +245,8 @@ image(kitchenRoomAssets[10], x, y);   //
 drawGarden = function() {
 
 //images in array
+image(gardenAssets[0], x, y);  //
+image(gardenAssets[0], x, y);  //
 
 }
 
@@ -255,6 +254,8 @@ drawGarden = function() {
 drawInstructions = function() {
 
 //images in array
+image(instructionAssets[0], x, y);  //
+image(instructionAssets[1], x, y);  //
 
 }
 
