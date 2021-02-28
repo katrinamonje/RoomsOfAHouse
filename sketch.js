@@ -28,9 +28,6 @@ var gardenAssets = [];
 var instructionAssets = [];
 var instructions = [];
 
-// variable setting up array for navigation keys
-var navKey = [];
-
 // preload all images into an arrays according to room
 function preload() {
 
@@ -123,14 +120,6 @@ function setup() {
   textAlign(CENTER);
   textSize(24);
   noStroke();
-
-  // setting the array of navigation keys
-  navKey[0] = (‘[r]’);
-  navKey[1] = (‘[b]’);
-  navKey[2] = (‘[t]’);
-  navKey[3] = (‘[l]’);
-  navKey[4] = (‘[k]’);
-  navKey[5] = (‘[g]’);
 
   // set to one for startup
   drawFunction = drawBedroom;
@@ -258,7 +247,7 @@ image(instructionAssets[1], 1687, 981);  // button
 //========= TEMPLATE: add or change interface functions, as you like =========
 
 // Change the drawFunction variable based on your interaction
-function keyTyped() {
+function keyPressed() {
 
   print(keyCode);
 
