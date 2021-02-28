@@ -110,7 +110,7 @@ function preload() {
   instructions[3] = "Prress B to take a shower";
   instructions[4] = "Press T to watch a movie";
   instructions[5] = "Press G to feed the fish and water the plants";
-  instructions[0] = "Press L to read a book";
+  instructions[6] = "Press L to read a book";
 }
 
 // center drawing, drawFunction will be one for default
@@ -120,6 +120,9 @@ function setup() {
   textAlign(CENTER);
   textSize(24);
   noStroke();
+
+  centerWidth = width/2;
+  centerHeight = height/2
 
   // set to one for startup
   drawFunction = drawBedroom;
@@ -241,6 +244,19 @@ drawInstructions = function() {
 image(instructionAssets[0], 415, 44);  // clipboard
 image(instructionAssets[1], 1687, 981);  // button
 
+//instructions
+fill(0);
+textSize(52);
+text(instructions[0], centerWidth, centerHeight);
+
+textSize(26);
+text(instructions[1], centerWidth, centerHeight)
+text(instructions[2], centerWidth, centerHeight)
+text(instructions[3], centerWidth, centerHeight)
+text(instructions[4], centerWidth, centerHeight)
+text(instructions[5], centerWidth, centerHeight)
+text(instructions[6], centerWidth, centerHeight)
+
 }
 
 
@@ -314,7 +330,7 @@ else if( drawFunction === drawGarden) {
 
 // help icon --> instructions screen
 function mousePressed() {
-  if( drawFunction === drawInstructions ) {
+  if( drawFunction === drawBedroom ) {
     drawFunction = drawInstructions;
   }
 }
