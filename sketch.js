@@ -18,6 +18,12 @@
 // variable that is a function 
 var drawFunction;
 
+// variables for helpIcon
+var helpIconX = 1792;
+var helpIconY = 973;
+var questionMarkX = 1820;
+var questiomMarkY = 985;
+
 // image variables
 var bedroomAssets = [];
 var bathroomAssets = [];
@@ -101,7 +107,7 @@ function preload() {
   gardenAssets[0] = loadImage("assets/garden.jpeg");
   gardenAssets[1] = loadImage("assets/hammock.png");
 
-  //clipboard
+  //instructions
   instructionAssets[0] = loadImage("assets/clipboard.png");
   instructionAssets[1] = loadImage("assets/button.png");
   instructions[0] = "Welcome to my house!";
@@ -111,18 +117,21 @@ function preload() {
   instructions[4] = "Press T to watch a movie";
   instructions[5] = "Press G to feed the fish and water the plants";
   instructions[6] = "Press L to read a book";
+
+  //helpIcon
+  instructionAssets[2] = loadImage("assets/helpIcon.png");
 }
 
 // center drawing, drawFunction will be one for default
 function setup() {
   createCanvas(1920, 1080);
-  imageMode(CENTER);
   textAlign(CENTER);
   textSize(24);
   noStroke();
 
+  //instructions screen
   centerWidth = width/2;
-  centerHeight = height/2
+  centerHeight = height/2;
 
   // set to one for startup
   drawFunction = drawBedroom;
@@ -138,6 +147,14 @@ function draw() {
 
 //========= TEMPLATE: modify these functions, INSIDE the function blocks only =========
 
+// helpIcon
+function drawHelpIcon() {
+  fill(0, 0, 0, 70)
+  ellipse(10, 10, helpIconX, helpIconY);
+  fill(255);
+  text("?", questionMarkX, questiomMarkY);
+}
+
 // draws images from bedroomAssets array
 drawBedroom = function() {
 
@@ -148,12 +165,12 @@ image(bedroomAssets[2], 251, 58);     // garden
 image(bedroomAssets[3], 0, -117);     // ceiling
 image(bedroomAssets[4], -14, 58);     // sliding doors
 image(bedroomAssets[5], 734, 140);    // right curtains
-image(bedroomAssets[6], -321, 48);    // left curtains
+image(bedroomAssets[6], -321, 140);    // left curtains
 image(bedroomAssets[7], 57, 607);     // bed
-image(bedroomAssets[8], -301, 85);    // floor lamp
+image(bedroomAssets[8], -301, 185);    // floor lamp
 image(bedroomAssets[9], 1147, 558);   // chairs
 image(bedroomAssets[10], 1474, -31);  // plant
-
+//drawFunction = drawHelpIcon;
 }
 
 // draws images from bathroommAssets array
@@ -163,7 +180,7 @@ drawBathroom = function() {
 image(bathroomAssets[0], 0, 0);       // wall
 image(bathroomAssets[1], 1009, 0);    // concrete wall
 image(bathroomAssets[2], 552, 86);    // mirror
-image(bathroomAssets[3], -1400, 10);  // shower head
+image(bathroomAssets[3], 1400, -10);  // shower head
 image(bathroomAssets[4], -33, 5);     // marble wallpaper
 image(bathroomAssets[5], 0, 252);     // floor
 image(bathroomAssets[6], 880, 375);   // shower faucet
@@ -173,7 +190,7 @@ image(bathroomAssets[9], 595, 390);   // sink top
 image(bathroomAssets[10], 1009, -12); // shower enclosure
 image(bathroomAssets[11], 627, -15);  // light
 image(bathroomAssets[12], 29, 434);   // toilet
-
+//drawFunction = drawHelpIcon;
 }
 
 // draws images from theaterRoomAssets array
@@ -189,10 +206,10 @@ image(theaterRoomAssets[5], 612, 173);    // movie poster
 image(theaterRoomAssets[6], 895, 616);    // reclining chair bottoom right
 image(theaterRoomAssets[7], 505, 682);    // reclining chair botttom middle
 image(theaterRoomAssets[8], 49, 716);     // reclining chair bottom left
-image(theaterRoomAssets[8], -715, 323);   // projector screen
+image(theaterRoomAssets[8], -715, -323);   // projector screen
 image(theaterRoomAssets[10], 562, 0);     // left spotlight
 image(theaterRoomAssets[11], 1193, 0);    // right spotlight
-
+//drawFunction = drawHelpIcon;
 }
 
 // draws images from livingRoomAssets array
@@ -207,25 +224,25 @@ image(livingRoomAssets[4], 784, -202);   // couch
 image(livingRoomAssets[5], 764, 383);   // center table
 image(livingRoomAssets[6], -35, 306);   // side sofa
 image(livingRoomAssets[7], 899, 136);   // bookshelves
-
+//drawFunction = drawHelpIcon;
 }
 
 // draws images from kitchenAssets array
 drawKitchen = function() {
 
 //images in array
-image(kitchenRoomAssets[0], 0, 0);   // wall
-image(kitchenRoomAssets[1], 320, -5);   // backsplash 1
-image(kitchenRoomAssets[2], 1308, -5);   // backsplaash 2
-image(kitchenRoomAssets[3], 0, 673);   // floor
-image(kitchenRoomAssets[4], 859, 316);   // fridge
-image(kitchenRoomAssets[5], -93, -106);   // countertops
-image(kitchenRoomAssets[6], 512, 730);   // island
-image(kitchenRoomAssets[7], 1451, 168);   // door
-image(kitchenRoomAssets[8], 132, -5);   // ceiling
-image(kitchenRoomAssets[9], 625, 21);   // lamp
-image(kitchenRoomAssets[10], 276, 378);   // plant
-
+image(kitchenAssets[0], 0, 0);   // wall
+image(kitchenAssets[1], 320, -5);   // backsplash 1
+image(kitchenAssets[2], 1308, -5);   // backsplaash 2
+image(kitchenAssets[3], 0, 673);   // floor
+image(kitchenAssets[4], 859, 316);   // fridge
+image(kitchenAssets[5], -93, -106);   // countertops
+image(kitchenAssets[6], 512, 730);   // island
+image(kitchenAssets[7], 1451, 168);   // door
+image(kitchenAssets[8], 132, -5);   // ceiling
+image(kitchenAssets[9], 625, 21);   // lamp
+image(kitchenAssets[10], 276, 378);   // plant
+//drawFunction = drawHelpIcon;
 }
 
 // draws images from gardenAssets array
@@ -234,7 +251,7 @@ drawGarden = function() {
 //images in array
 image(gardenAssets[0], 0, 0);  // garden
 image(gardenAssets[1], 683, 324);  // hammock
-
+//drawFunction = drawHelpIcon;
 }
 
 // draws images from instructionAssets array
@@ -242,7 +259,7 @@ drawInstructions = function() {
 
 //images in array
 image(instructionAssets[0], 415, 44);  // clipboard
-image(instructionAssets[1], 1687, 981);  // button
+//drawFunction = drawButton;
 
 //instructions
 fill(0);
@@ -250,14 +267,24 @@ textSize(52);
 text(instructions[0], centerWidth, centerHeight);
 
 textSize(26);
-text(instructions[1], centerWidth, centerHeight)
-text(instructions[2], centerWidth, centerHeight)
-text(instructions[3], centerWidth, centerHeight)
-text(instructions[4], centerWidth, centerHeight)
-text(instructions[5], centerWidth, centerHeight)
-text(instructions[6], centerWidth, centerHeight)
+text(instructions[1], centerWidth - 20, centerHeight + 80)
+text(instructions[2], centerWidth - 20 , centerHeight + 130)
+text(instructions[3], centerWidth - 20, centerHeight + 180)
+text(instructions[4], centerWidth - 20, centerHeight + 230)
+text(instructions[5], centerWidth - 20, centerHeight + 280)
+text(instructions[6], centerWidth - 20, centerHeight +330)
 
 }
+
+// // draws help icon from array
+// drawHelpIcon = function() {
+//   image(instructionAssets[2], helpIconX, helpIconY); // help icon
+// }
+
+// // draws got it button from array
+// drawButton = function() {
+//   image(instructionAssets[1], 1687, 981);  // button
+//}
 
 
 //========= TEMPLATE: add or change interface functions, as you like =========
@@ -319,6 +346,18 @@ else if( drawFunction === drawKitchen) {
     }
 }
 
+else if( drawFunction === drawLivingRoom) {
+    if( key === 'b' ) {
+       drawFunction = drawBathroom;
+    }
+    else if( key === 'k' ) {
+     drawFunction = drawKitchen;
+    }
+    else if( key === 't' ) {
+     drawFunction = drawTheaterRoom;
+    }
+}
+
 else if( drawFunction === drawGarden) {
     if( key === 'k' ) {
        drawFunction = drawKitchen;
@@ -331,7 +370,7 @@ else if( drawFunction === drawGarden) {
 
 // help icon --> instructions screen
 function mousePressed() {
-  if( drawFunction === drawBedroom ) {
+  if( drawFunction === drawHelpIcon ) {
     drawFunction = drawInstructions;
   }
 }
