@@ -6,6 +6,10 @@
   This is an assignment that shows a navigation structure of 6 rooms of a house 
   using the mouse and some keyboard functions.
 
+  Notes:
+  I couldn't get the drawButton() function to work (I want it to go back to the bedroom
+  when a user clicks the "Got it!" button on the instructions screen.)
+  Other than that, all rooms should work.
 ------------------------------------------------------------------------------------
 	The way it works
 	* arrays of images get loaded at startup
@@ -153,7 +157,7 @@ function drawHelpIcon() {
 
 // draws got it button from array
 function drawButton() {
-  image(instructionAssets[1], 1687, 981);  // button
+  image(instructionAssets[1], 1680, 981);  // button
 }
 
 //========= TEMPLATE: modify these functions, INSIDE the function blocks only =========
@@ -369,9 +373,10 @@ function keyPressed() {
 
 // help icon --> instructions screens
 function mousePressed() {
-  if( drawHelpIcon ) {
+  if(drawHelpIcon ) {
     drawFunction = drawInstructions;
   }
+
   else if( drawButton ) {
     drawFunction = drawBedroom;
   }
