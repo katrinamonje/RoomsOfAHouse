@@ -237,7 +237,7 @@ image(kitchenAssets[2], 1308, -5);   // backsplaash 2
 image(kitchenAssets[8], 130, -5);   // ceiling
 image(kitchenAssets[3], 0, 673);   // floor
 image(kitchenAssets[4], 859, 316);   // fridge
-image(kitchenAssets[5], -93, -113);   // countertops
+image(kitchenAssets[5], 0, 0);   // countertops
 image(kitchenAssets[6], 512, 730);   // island
 image(kitchenAssets[7], 1451, 168);   // door
 image(kitchenAssets[9], 625, 21);   // lamp
