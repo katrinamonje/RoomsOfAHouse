@@ -135,6 +135,7 @@ function setup() {
 
   // set to one for startup
   drawFunction = drawBedroom;
+
 }
 
 // Very simple, sets the background color and calls your state machine function
@@ -145,15 +146,17 @@ function draw() {
   drawFunction();
 }
 
-//========= TEMPLATE: modify these functions, INSIDE the function blocks only =========
-
-// helpIcon
+// draws help icon from array
 function drawHelpIcon() {
-  fill(0, 0, 0, 80)
-  ellipse(10, 10, helpIconX, helpIconY);
-  fill(255);
-  text("?", questionMarkX, questiomMarkY);
+  image(instructionAssets[2], helpIconX, helpIconY); // help icon
 }
+
+// draws got it button from array
+function drawButton() {
+  image(instructionAssets[1], 1687, 981);  // button
+}
+
+//========= TEMPLATE: modify these functions, INSIDE the function blocks only =========
 
 // draws images from bedroomAssets array
 drawBedroom = function() {
@@ -170,7 +173,8 @@ image(bedroomAssets[7], 57, 607);     // bed
 image(bedroomAssets[8], -301, 185);    // floor lamp
 image(bedroomAssets[9], 1147, 558);   // chairs
 image(bedroomAssets[10], 1474, -31);  // plant
-//drawFunction = drawHelpIcon;
+
+drawHelpIcon();
 }
 
 // draws images from bathroommAssets array
@@ -190,7 +194,8 @@ image(bathroomAssets[9], 595, 390);   // sink top
 image(bathroomAssets[10], 1009, -12); // shower enclosure
 image(bathroomAssets[11], 627, -15);  // light
 image(bathroomAssets[12], 29, 434);   // toilet
-//drawFunction = drawHelpIcon;
+
+drawHelpIcon();
 }
 
 // draws images from theaterRoomAssets array
@@ -209,7 +214,8 @@ image(theaterRoomAssets[8], 49, 716);     // reclining chair bottom left
 image(theaterRoomAssets[9], -715, -323);   // projector screen
 image(theaterRoomAssets[10], 562, 0);     // left spotlight
 image(theaterRoomAssets[11], 1193, 0);    // right spotlight
-//drawFunction = drawHelpIcon;
+
+drawHelpIcon();
 }
 
 // draws images from livingRoomAssets array
@@ -224,7 +230,8 @@ image(livingRoomAssets[4], 784, -202);   // couch
 image(livingRoomAssets[5], 764, 383);   // center table
 image(livingRoomAssets[6], -35, 306);   // side sofa
 image(livingRoomAssets[7], 899, 136);   // bookshelves
-//drawFunction = drawHelpIcon;
+
+drawHelpIcon();
 }
 
 // draws images from kitchenAssets array
@@ -242,7 +249,8 @@ image(kitchenAssets[6], 512, 730);   // island
 image(kitchenAssets[7], 1451, 168);   // door
 image(kitchenAssets[9], 625, 21);   // lamp
 image(kitchenAssets[10], 276, 378);   // plant
-//drawFunction = drawHelpIcon;
+
+drawHelpIcon();
 }
 
 // draws images from gardenAssets array
@@ -251,7 +259,8 @@ drawGarden = function() {
 //images in array
 image(gardenAssets[0], 0, 0);  // garden
 image(gardenAssets[1], 683, 324);  // hammock
-//drawFunction = drawHelpIcon;
+
+drawHelpIcon();
 }
 
 // draws images from instructionAssets array
@@ -259,7 +268,7 @@ drawInstructions = function() {
 
 //images in array
 image(instructionAssets[0], 415, 44);  // clipboard
-//drawFunction = drawButton;
+drawButton();
 
 //instructions
 fill(0);
@@ -275,16 +284,6 @@ text(instructions[5], centerWidth - 20, centerHeight + 280)
 text(instructions[6], centerWidth - 20, centerHeight +330)
 
 }
-
-// // draws help icon from array
-// drawHelpIcon = function() {
-//   image(instructionAssets[2], helpIconX, helpIconY); // help icon
-// }
-
-// // draws got it button from array
-// drawButton = function() {
-//   image(instructionAssets[1], 1687, 981);  // button
-//}
 
 
 //========= TEMPLATE: add or change interface functions, as you like =========
@@ -305,72 +304,75 @@ function keyPressed() {
     else if( key === 'l' ) {
   	 drawFunction = drawLivingRoom;
     }
-}
+  }
 
-else if( drawFunction === drawBathroom) {
+  else if( drawFunction === drawBathroom) {
     if( key === 'r' ) {
-       drawFunction = drawBedroom;
+      drawFunction = drawBedroom;
     }
     else if( key === 'k' ) {
-     drawFunction = drawKitchen;
+      drawFunction = drawKitchen;
     }
     else if( key === 'l' ) {
-     drawFunction = drawLivingRoom;
+      drawFunction = drawLivingRoom;
     }
     else if( key === 't' ) {
-     drawFunction = drawTheaterRoom;
+      drawFunction = drawTheaterRoom;
     }
-}
+  }
 
-else if( drawFunction === drawTheaterRoom) {
+  else if( drawFunction === drawTheaterRoom) {
     if( key === 'k' ) {
-       drawFunction = drawKitchen;
+      drawFunction = drawKitchen;
     }
     else if( key === 'l' ) {
-     drawFunction = drawLivingRoom;
+      drawFunction = drawLivingRoom;
     }
     else if( key === 'b' ) {
-     drawFunction = drawBathroom;
+      drawFunction = drawBathroom;
     }
-}
+  }
 
-else if( drawFunction === drawKitchen) {
+  else if( drawFunction === drawKitchen) {
     if( key === 'b' ) {
-       drawFunction = drawBathroom;
+      drawFunction = drawBathroom;
     }
     else if( key === 'g' ) {
-     drawFunction = drawGarden;
+      drawFunction = drawGarden;
     }
     else if( key === 'l' ) {
-     drawFunction = drawLivingRoom;
+      drawFunction = drawLivingRoom;
     }
-}
+  }
 
-else if( drawFunction === drawLivingRoom) {
+  else if( drawFunction === drawLivingRoom) {
     if( key === 'b' ) {
-       drawFunction = drawBathroom;
+      drawFunction = drawBathroom;
     }
     else if( key === 'k' ) {
-     drawFunction = drawKitchen;
+      drawFunction = drawKitchen;
     }
     else if( key === 't' ) {
-     drawFunction = drawTheaterRoom;
+      drawFunction = drawTheaterRoom;
     }
-}
+  }
 
-else if( drawFunction === drawGarden) {
+  else if( drawFunction === drawGarden) {
     if( key === 'k' ) {
-       drawFunction = drawKitchen;
+      drawFunction = drawKitchen;
     }
     else if( key === 'b' ) {
-     drawFunction = drawBedroom;
+      drawFunction = drawBedroom;
     }
-}
+  }
 }
 
-// help icon --> instructions screen
+// help icon --> instructions screens
 function mousePressed() {
-  if( drawFunction === drawHelpIcon ) {
+  if( drawHelpIcon ) {
     drawFunction = drawInstructions;
+  }
+  else if( drawButton ) {
+    drawFunction = drawBedroom;
   }
 }
