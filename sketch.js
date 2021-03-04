@@ -149,7 +149,7 @@ function draw() {
 
 // helpIcon
 function drawHelpIcon() {
-  fill(0, 0, 0, 70)
+  fill(0, 0, 0, 80)
   ellipse(10, 10, helpIconX, helpIconY);
   fill(255);
   text("?", questionMarkX, questiomMarkY);
@@ -201,12 +201,12 @@ image(theaterRoomAssets[0], -1, 657);     // floor
 image(theaterRoomAssets[1], -31, -3);     // wallpaper
 image(theaterRoomAssets[2], 1453, 403);   // cocktail bar
 image(theaterRoomAssets[3], 581, 540);    // reclining chair top right
-image(theaterRoomAssets[3], 146, 583);    // reclining chair top left
+image(theaterRoomAssets[4], 146, 583);    // reclining chair top left
 image(theaterRoomAssets[5], 612, 173);    // movie poster
 image(theaterRoomAssets[6], 895, 616);    // reclining chair bottoom right
 image(theaterRoomAssets[7], 505, 682);    // reclining chair botttom middle
 image(theaterRoomAssets[8], 49, 716);     // reclining chair bottom left
-image(theaterRoomAssets[8], -715, -323);   // projector screen
+image(theaterRoomAssets[9], -715, -323);   // projector screen
 image(theaterRoomAssets[10], 562, 0);     // left spotlight
 image(theaterRoomAssets[11], 1193, 0);    // right spotlight
 //drawFunction = drawHelpIcon;
@@ -234,12 +234,12 @@ drawKitchen = function() {
 image(kitchenAssets[0], 0, 0);   // wall
 image(kitchenAssets[1], 320, -5);   // backsplash 1
 image(kitchenAssets[2], 1308, -5);   // backsplaash 2
+image(kitchenAssets[8], 130, -5);   // ceiling
 image(kitchenAssets[3], 0, 673);   // floor
 image(kitchenAssets[4], 859, 316);   // fridge
-image(kitchenAssets[5], -93, -106);   // countertops
+image(kitchenAssets[5], -93, -113);   // countertops
 image(kitchenAssets[6], 512, 730);   // island
 image(kitchenAssets[7], 1451, 168);   // door
-image(kitchenAssets[8], 132, -5);   // ceiling
 image(kitchenAssets[9], 625, 21);   // lamp
 image(kitchenAssets[10], 276, 378);   // plant
 //drawFunction = drawHelpIcon;
